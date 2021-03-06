@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://loema.tech/blog.xml"
         />
       </Head>
-      <ChakraProvider resetCSS={false} theme={theme}>
+      <ChakraProvider resetCSS={true} theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
     </>

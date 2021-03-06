@@ -1,26 +1,22 @@
 import Head from "next/head";
-import { Stack, Code, Center, Box } from "@chakra-ui/react";
+import { Stack, Code, Center, Box, Divider } from "@chakra-ui/react";
 
 // components
-import { Particles, CodeBlock, Loader } from "../components";
-import styles from "../styles/Header.module.css";
+import { Layout, Hero, Features } from "../components";
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Loema tech</title>
+        <title>Modbus tech</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Particles />
-        <CodeBlock />
-        <Box bg="gray.900" opacity="0.7">
-          <Center h="100px" color="white">
-            <Loader />
-          </Center>
-        </Box>
+        <Layout>
+          <Hero />
+          <Features />
+        </Layout>
       </main>
 
       <footer>Footer</footer>
