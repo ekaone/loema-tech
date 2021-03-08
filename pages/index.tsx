@@ -7,13 +7,8 @@ import { Layout, Hero, Features, Services, Contact } from "../components";
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Loema Tech</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
-        <Layout>
+        <Layout title={"Home"}>
           <Hero />
           <Features />
           <Services />
