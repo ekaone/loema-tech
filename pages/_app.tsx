@@ -6,7 +6,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/favicon.png" />
         <link
           rel="alternate"
           type="application/rss+xml"

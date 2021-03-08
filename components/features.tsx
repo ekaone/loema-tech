@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { motion } from "framer-motion";
 import {
   Box,
   SimpleGrid,
@@ -24,7 +25,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         bg="gray.600"
         p={6}
         color="white"
-        opacity="0.5"
+        opacity="0.9"
         borderRadius="lg"
         h={220}
       >
@@ -38,7 +39,12 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
           bg={"gray.100"}
           mb={1}
         >
-          {icon}
+          <motion.div
+            animate={{ rotateX: 360 }}
+            transition={{ duration: 0.8, delay: 2 }}
+          >
+            {icon}
+          </motion.div>
         </Flex>
         <Text fontWeight={600} color="green.300">
           {title}
@@ -63,7 +69,15 @@ export default function Features() {
       <Box p={4}>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
           <Feature
-            icon={<Icon as={GiCargoShip} w={10} h={10} color="red.400" />}
+            icon={
+              <Icon
+                as={GiCargoShip}
+                w={10}
+                h={10}
+                color="red.400"
+                style={{ originY: 0.5 }}
+              />
+            }
             title={"MARITIME"}
             text={
               "Vessel and Fuel Monitoring System, Palka's Temperature, Broadband Satellite, Automatic Identification System (AIS), Satellite Phone"
